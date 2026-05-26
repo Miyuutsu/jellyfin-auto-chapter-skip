@@ -1,13 +1,12 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using Elmuffo.Plugin.AutoChapterSkip.Configuration;
+using Jellyfin.Plugin.AutoChapterSkip.Configuration;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
 
-namespace Elmuffo.Plugin.AutoChapterSkip;
+namespace Jellyfin.Plugin.AutoChapterSkip;
 
 /// <summary>
 /// The main plugin.
@@ -26,7 +25,7 @@ public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
     }
 
     /// <inheritdoc />
-    public override string Name => "Auto Chapter Skip";
+    public override string Name => "AutoChapterSkip";
 
     /// <inheritdoc />
     public override Guid Id => Guid.Parse("246b4b7a-2e91-4ec6-8478-215be18bc01d");
@@ -44,7 +43,7 @@ public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
             new PluginPageInfo
             {
                 Name = this.Name,
-                EmbeddedResourcePath = string.Format(CultureInfo.InvariantCulture, "{0}.Configuration.configPage.html", GetType().Namespace)
+                EmbeddedResourcePath = "Jellyfin.Plugin.AutoChapterSkip.Configuration.configPage.html"
             }
         };
     }

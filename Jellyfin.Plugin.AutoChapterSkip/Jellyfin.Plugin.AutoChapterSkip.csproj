@@ -1,8 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>Elmuffo.Plugin.AutoChapterSkip</RootNamespace>
+    <TargetFramework>net9.0</TargetFramework>
+    <Guid>246b4b7a-2e91-4ec6-8478-215be18bc01d</Guid>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <FileVersion>4.0.0.0</FileVersion>
+    <RootNamespace>Jellyfin.Plugin.AutoChapterSkip</RootNamespace>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Nullable>enable</Nullable>
@@ -11,8 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jellyfin.Controller" Version="10.8.0" />
-    <PackageReference Include="Jellyfin.Model" Version="10.8.0" />
+    <PackageReference Include="Jellyfin.Controller" Version="10.11.9" ExcludeAssets="runtime" />
+    <PackageReference Include="Jellyfin.Model" Version="10.11.9" ExcludeAssets="runtime" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,8 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Configuration/configPage.html" />
     <None Remove="Configuration\configPage.html" />
-    <EmbeddedResource Include="Configuration\configPage.html" />
+    <EmbeddedResource Include="Configuration/configPage.html">
+      <LogicalName>Jellyfin.Plugin.AutoChapterSkip.Configuration.configPage.html</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 using MediaBrowser.Model.Plugins;
 
-namespace Elmuffo.Plugin.AutoChapterSkip.Configuration;
+namespace Jellyfin.Plugin.AutoChapterSkip.Configuration;
 
 /// <summary>
 /// Plugin configuration.
